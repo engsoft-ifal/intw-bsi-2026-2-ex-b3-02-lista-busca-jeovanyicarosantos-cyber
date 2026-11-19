@@ -1,12 +1,14 @@
 
+const cursos = ["HTML", "CSS", "JavaScript"];
+
 const lista = document.querySelector("#lista");
 const busca = document.querySelector("#busca");
 
-// Função para renderizar os cursos
+// Função para mostrar os cursos
 function render(termo = "") {
 
     const filtrados = cursos.filter(curso =>
-        curso.nome.toLowerCase().includes(termo.toLowerCase())
+        curso.toLowerCase().includes(termo.toLowerCase())
     );
 
     if (filtrados.length === 0) {
@@ -14,12 +16,12 @@ function render(termo = "") {
         return;
     }
 
-    lista.innerHTML = filtrados.map(curso => `
-        <li>${curso.nome}</li>
-    `).join("");
+    lista.innerHTML = filtrados.map(curso =>
+        `<li>${curso}</li>`
+    ).join("");
 }
 
-// Mostrar todos os cursos ao carregar
+// Mostrar os cursos ao carregar
 render();
 
 // Filtrar enquanto digita
