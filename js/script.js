@@ -1,14 +1,4 @@
 
-const cursos = [
-  { nome: "HTML", area: "Estrutura" },
-  { nome: "CSS", area: "Estilo" },
-  { nome: "JavaScript", area: "Comportamento" },
-];
-
-const lista = document.querySelector("#lista");
-const busca = document.querySelector("#busca");
-
-
 const lista = document.querySelector("#lista");
 const busca = document.querySelector("#busca");
 
@@ -36,4 +26,3 @@ render();
 busca.addEventListener("input", () => {
     render(busca.value);
 });
-
